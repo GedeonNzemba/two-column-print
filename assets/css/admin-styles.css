@@ -1,0 +1,23 @@
+.wrap {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.form-table input[type="number"] {
+    width: 80px;
+}
+
+.form-table input[type="text"] {
+    width: 100%;
+}
+
+.description {
+    color: #666;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.settings-error {
+    margin: 5px 0 15px;
+}

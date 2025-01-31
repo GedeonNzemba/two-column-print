@@ -1,0 +1,62 @@
+.tcp-print-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0073aa;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.tcp-print-button:hover {
+    background-color: #005177;
+}
+
+@media print {
+    /* Hide all default elements */
+    body * {
+        visibility: hidden;
+    }
+    
+    /* Show only our print container */
+    .tcp-print-container,
+    .tcp-print-container * {
+        visibility: visible;
+    }
+    
+    .tcp-print-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    /* Remove headers and footers */
+    @page {
+        margin: 0.5cm;
+        size: auto;
+    }
+
+    /* Hide specific WordPress elements */
+    header, 
+    footer, 
+    #header, 
+    #footer, 
+    .header, 
+    .footer, 
+    .site-header, 
+    .site-footer, 
+    .wp-header, 
+    .wp-footer,
+    .print-button,
+    .tcp-print-button {
+        display: none !important;
+    }
+
+    /* Remove URLs from printed links */
+    a[href]:after {
+        content: none !important;
+    }
+}
